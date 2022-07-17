@@ -1,32 +1,16 @@
-const Pet = (props) => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, props.name),
-    React.createElement("h2", {}, props.animal),
-    React.createElement("h2", {}, props.breed),
-  ]);
-};
+import * as React from "react";
+import { createRoot } from "react-dom";
+import { Pet } from "./Pet";
 const App = () => {
-  return React.createElement("div", {}, [
-    React.createElement(
-      "h1",
-      null,
-      "Welcome to the react-native-firebase project"
-    ),
-    React.createElement(Pet, {
-      name: "Copo",
-      animal: "Dog",
-      breed: "German shepherd  ",
-    }),
-    React.createElement(Pet, {
-      name: "Coqueta",
-      animal: "Chicken",
-      breed: "Hen",
-    }),
-    React.createElement(Pet, {
-      name: "Copo",
-      animal: "Dog",
-      breed: "German shepherd  ",
-    }),
-  ]);
+  return (
+    <div>
+      <h1> welcome to My react App</h1>
+      <Pet name="Copo" animal="dog" breed="german shepherd" />
+      <Pet name="Copo" animal="dog" breed="german shepherd" />
+      <Pet name="Copo" animal="dog" breed="german shepherd" />
+    </div>
+  );
 };
-ReactDOM.render(React.createElement(App), document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);

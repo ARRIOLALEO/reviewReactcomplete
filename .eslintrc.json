@@ -4,12 +4,18 @@
         "plugin:import/error",
         "plugin:react/recommended",
         "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
         "prettier"
-    ],
+    ],"rules":{
+        "react/prop-types":"off",
+        "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx"] }],
+        "react/react-in-jsx-scope":"off"
+    },
     "plugins": [
         "react",
         "jsx-a11y",
-        "import"
+        "import",
+        "react-hooks"
     ],
     "parserOptions": {
         "ecmaVersion": 2022,
@@ -22,5 +28,10 @@
         "es6": true,
         "browser": true,
         "node": true
+    },
+    "settings": {
+        "react": {
+            "version": "detect"
+        }
     }
 }
